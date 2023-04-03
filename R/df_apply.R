@@ -11,9 +11,9 @@
 #' @examples
 #' funct <- function(.int) {return(.int * 2)}
 #' filt <- function(c) {is.numeric(c)}
-#' df_apply(presidents, funct, filt)
-#' 
-#' 
+#' df_apply(prezident, funct, filt)
+#'
+#'
 df_apply <- function(.data, .fun, .filter, ...) {
   stopifnot(is.data.frame(.data))
   indices <- sapply(.data, .filter)

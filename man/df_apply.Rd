@@ -24,7 +24,7 @@ Apply alteration to dataframe
 \examples{
 funct <- function(.int) {return(.int * 2)}
 filt <- function(c) {is.numeric(c)}
-df_apply(presidents, funct, filt)
+df_apply(prezident, funct, filt)
 
 
 }
