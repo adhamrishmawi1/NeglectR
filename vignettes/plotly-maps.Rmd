@@ -25,6 +25,7 @@ Before creating maps, we need to load the plotly package into our working enviro
 
 ```{r load-plotly, message = FALSE}
 library(plotly)
+library(tidyr)
 ```
 
 ## Chloropleth Maps

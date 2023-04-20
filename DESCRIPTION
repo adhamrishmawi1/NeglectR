@@ -13,7 +13,8 @@ Suggests:
     testthat (>= 3.0.0),
     ggplot2,
     knitr,
-    rmarkdown
+    rmarkdown,
+    tidyr
 Depends: 
     R (>= 2.10)
 LazyData: true
