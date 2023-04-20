@@ -64,7 +64,7 @@ plot_ly(data, x = ~DepthAvg, y = ~TagID, type = "scatter",
             yaxis = list(title = "Tag day"))
 ```
 
-much better
+much better because it isnt a line graph!!
 
 
 # WORKING PROGRESS NEED TO ADD MORE
