@@ -1,0 +1,68 @@
+---
+title: "plotly-lines"
+author: "Adham Rishmawi"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{plotly-lines}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(NeglectR)
+```
+
+
+## line graphs
+
+Frequently employed to depict fluctuations over time, line graphs embody one of the most popular chart types within the data visualization suite of tools known as Plotly utilized in R. A dynamic library capable of producing charts with user interaction features, Planoly requires x-y input data points (where x denotes time), while y denotes numerical measurement values to produce its visualizations. 
+
+For example here is an implementation case for generating straight forward linear graphs through Poltoly.
+
+Before creating linegraphs, we need to load the plotly package into our working environment.
+
+```{r load-plotly, message = FALSE, warning=FALSE}
+library(plotly)
+library(tidyr)
+```
+
+## loading data
+
+```{r}
+data <- read.csv('http://sldr.netlify.com/data/zshal.csv')
+
+```
+
+## graph examples
+```{r}
+plot_ly(data, x = ~TagDay, y = ~DepthAvg, type = "scatter", mode = "lines",
+        color = ~TransClass, colors = c("blue", "red", "green", "purple"),
+        hoverinfo = "text", text = ~paste("Tag ID: ", TagID, "<br>Tag Day: ", TagDay, "<br>Depth Avg: ", DepthAvg)) |>
+# Add chart title and axis labels
+  layout(title = "Depth Average by Tag Day and Transmission Class",
+            xaxis = list(title = "Tag Day"),
+            yaxis = list(title = "Depth Average (meters)"))
+```
+
+this graph is horrible so lets make a better one!
+
+```{r}
+plot_ly(data, x = ~DepthAvg, y = ~TagID, type = "scatter",
+        color = ~TransClass, colors = c("blue", "red", "green", "purple"),
+        hoverinfo = "text", text = ~paste("Tag ID: ", TagID, "<br>Tag Day: ", TagDay, "<br>Depth Avg: ", DepthAvg))|>
+
+# Add chart title and axis labels
+  layout(title = "Depth Average by Tag Day and Transmission Class",
+            xaxis = list(title = "Depth Average (meters)"),
+            yaxis = list(title = "Tag day"))
+```
+
+much better because it isnt a line graph!!
+
