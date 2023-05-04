@@ -1,25 +1,19 @@
 ---
 title: "plotly-lines"
 author: "Adham Rishmawi"
-output: rmarkdown::html_vignette
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
 vignette: >
   %\VignetteIndexEntry{plotly-lines}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-
-knitr::opts_chunk$set(echo = TRUE)
-# This code chunk reads in the image file and embeds it in the Rmd output
-
-```
-
 ```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
 library(NeglectR)
 ```
 
