@@ -13,6 +13,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+knitr::opts_chunk$set(echo = TRUE)
+# This code chunk reads in the image file and embeds it in the Rmd output
+
 ```
 
 ```{r setup}
