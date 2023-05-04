@@ -66,5 +66,3 @@ plot_ly(data, x = ~DepthAvg, y = ~TagID, type = "scatter",
 
 much better because it isnt a line graph!!
 
-
-# WORKING PROGRESS NEED TO ADD MORE
